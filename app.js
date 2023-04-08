@@ -2,7 +2,7 @@ const Game = {
 	getName: function () {
 		const name = prompt('Player Name?');
 		const nameEL = document.querySelector('.player');
-		if (name.length < 2) {
+		if (name === null || name.length < 2) {
 			nameEL.textContent = 'Player 1';
 		} else {
 			nameEL.textContent = name;
