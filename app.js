@@ -5,7 +5,6 @@ const Game = (function () {
 	const container = document.getElementById('contianer');
 	const card = document.querySelectorAll('.card');
 
-	function createCard() {}
 	function getName() {
 		const name = 'Player'; // prompt('Player Name?');
 
@@ -23,6 +22,7 @@ const Game = (function () {
 		let turn = 'playerTurn';
 		card.forEach((card) => {
 			card.addEventListener('click', () => {
+				// Add Image
 				let imgs = document.createElement('img');
 				if (card.children.length >= 1) {
 					return;
