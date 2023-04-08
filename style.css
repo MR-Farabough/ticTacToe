@@ -13,11 +13,23 @@
 	display: flex;
 	width: 45vw;
 	min-width: 150px;
+	background-color: rgb(237, 237, 237);
 	justify-content: space-between;
+}
+
+.player {
+	color: green;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.bot {
+	font-size: 20px;
 }
 
 #container {
 	display: grid;
+	margin-top: 20px;
 	grid-template-columns: repeat(3, minmax(50px, 15vw));
 	grid-template-rows: repeat(3, minmax(50px, 10vw));
 	justify-content: center;
