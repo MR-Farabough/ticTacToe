@@ -1,6 +1,6 @@
 const Game = {
 	getName: function () {
-		const name = prompt('Player Name?');
+		const name = 'Player'; // prompt('Player Name?');
 		const nameEL = document.querySelector('.player');
 		if (name === null || name.length < 2) {
 			nameEL.textContent = 'Player 1';
@@ -17,13 +17,6 @@ const Game = {
 		this.getName();
 		this.getBot();
 	},
-	card: function () {
-		const cardEL = document.getElementById('container');
-		cardEL.closest('div').addEventListener('click', () => {
-			console.log('test');
-		});
-	},
 };
 
 Game.render();
-Game.card();
