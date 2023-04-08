@@ -19,7 +19,7 @@
 .container {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(50px, 15vw));
-	grid-template-rows: repeat(3, minmax(50px, 15vw));
+	grid-template-rows: repeat(3, minmax(50px, 10vw));
 	justify-content: center;
 }
 
