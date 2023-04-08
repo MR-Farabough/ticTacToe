@@ -1,0 +1,31 @@
+:root {
+	--card-color: rgb(100, 177, 184);
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 150px;
+}
+
+.header-names {
+	display: flex;
+	width: 45vw;
+	min-width: 150px;
+	justify-content: space-between;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(50px, 15vw));
+	grid-template-rows: repeat(3, minmax(50px, 15vw));
+	justify-content: center;
+}
+
+.card {
+	border: 1px solid black;
+	background-color: var(--card-color);
+	width: minmax(50px, 10vw);
+	height: minmax(50px, 10vw);
+}
