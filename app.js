@@ -10,7 +10,7 @@ const Game = (function () {
 	let gameOver = false;
 
 	function getName() {
-		const name = prompt('Player Name?');
+		const name = 'Player'; // prompt('Player Name?');
 		if (name === null || name.length < 2) {
 			nameEL.textContent = 'Player 1';
 		} else {
