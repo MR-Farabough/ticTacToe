@@ -4,14 +4,13 @@ const Game = (function () {
 	const nameEL = document.querySelector('.player');
 	const cardNode = document.querySelectorAll('.card');
 	const errMsg = document.querySelector('.errorMSG');
+	const resetBTN = document.querySelector('.resetBTN');
 	let cards = Array.from(cardNode);
 	let takenCards = [];
 	let gameOver = false;
-	let playerScore = 0;
-	let botScore = 0;
 
 	function getName() {
-		const name = 'Player'; // prompt('Player Name?');
+		const name = prompt('Player Name?');
 		if (name === null || name.length < 2) {
 			nameEL.textContent = 'Player 1';
 		} else {
@@ -98,6 +97,9 @@ const Game = (function () {
 			}, 100);
 		}
 	}
+	resetBTN.addEventListener('click', () => {
+		window.location.reload();
+	});
 	function checkGameOver() {
 		// 0 | 1 | 2
 		// 3 | 4 | 5
@@ -123,7 +125,7 @@ const Game = (function () {
 					cardNode[3].innerHTML == redX &&
 					cardNode[6].innerHTML == redX)
 			) {
-				errMsg.textContent = 'RED column true';
+				errMsg.textContent = 'RED column WIN';
 				errMsg.style.color = 'green';
 				botEL.style.color = 'red';
 				nameEL.style.color = 'black';
@@ -139,7 +141,7 @@ const Game = (function () {
 					cardNode[3].innerHTML == black0 &&
 					cardNode[6].innerHTML == black0)
 			) {
-				errMsg.textContent = 'BLACK column true';
+				errMsg.textContent = 'BLACK column WIN';
 				errMsg.style.color = 'green';
 				botEL.style.color = 'black';
 				botEL.style.fontWeight = 'normal';
@@ -157,7 +159,7 @@ const Game = (function () {
 					cardNode[7].innerHTML == redX &&
 					cardNode[8].innerHTML == redX)
 			) {
-				errMsg.textContent = 'RED row true';
+				errMsg.textContent = 'RED row WIN';
 				errMsg.style.color = 'green';
 				botEL.style.color = 'red';
 				nameEL.style.color = 'black';
@@ -174,7 +176,7 @@ const Game = (function () {
 					cardNode[7].innerHTML == black0 &&
 					cardNode[8].innerHTML == black0)
 			) {
-				errMsg.textContent = 'BLACK row true';
+				errMsg.textContent = 'BLACK row WIN';
 				errMsg.style.color = 'green';
 				botEL.style.color = 'black';
 				botEL.style.fontWeight = 'normal';
@@ -189,7 +191,7 @@ const Game = (function () {
 					cardNode[4].innerHTML == redX &&
 					cardNode[6].innerHTML == redX)
 			) {
-				errMsg.textContent = 'RED diagnol true';
+				errMsg.textContent = 'RED diagnol WIN';
 				errMsg.style.color = 'green';
 				botEL.style.color = 'red';
 				nameEL.style.color = 'black';
@@ -202,7 +204,7 @@ const Game = (function () {
 					cardNode[4].innerHTML == black0 &&
 					cardNode[6].innerHTML == black0)
 			) {
-				errMsg.textContent = 'BLACK diagnol true';
+				errMsg.textContent = 'BLACK diagnol WIN';
 				errMsg.style.color = 'green';
 				botEL.style.color = 'black';
 				botEL.style.fontWeight = 'normal';

@@ -49,11 +49,21 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-left: 27.25%;
-	margin-top: 10px;
-	width: 45vw;
+	margin-top: 80px;
+	border-radius: 15px;
+	width: fit-content;
+	min-width: 140px;
 	min-width: 150px;
-	background-color: var(--card-color);
+	padding: 10px;
+	background-color: yellow;
+}
+
+.resetBTN {
+	cursor: pointer;
+	background: none;
+	border: none;
+	width: 15vw;
+	min-width: 140px;
 }
 
 .score {
